@@ -1,0 +1,695 @@
+/* HEADER */
+.header {
+    width: 100%;
+    height: 105px;
+    background-color: #FFFFFF;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    width: auto;
+    height: 63px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 63px;
+    height: 63px;
+    margin-right: 15px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.company-name {
+    font-size: 1.1em;
+    color: #212529;
+}
+
+.tagline {
+    font-size: 0.75em;
+    color: #6c757d;
+}
+
+/* NAVIGATION */
+.nav-list {
+    height: 52px;
+    display: flex;
+    gap: 34px;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+}
+
+
+.nav-link.active {
+    color: #000000;
+}
+
+.nav-link:hover {
+    color: #033E91;
+}
+
+/* AUTH BUTTONS */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.login-button {
+    width: 133px;
+    height: 48px;
+    padding: 10px 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: transparent;
+    color: #495057;
+    margin-right: 10px;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.login-button:hover {
+    border-color: #000000;
+    color: #212529;
+}
+
+.register-button {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #033E91 0, #0082C1 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,
+        rgba(45, 35, 66, .3) 0 7px 13px -3px,
+        rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    width: 150px;
+    justify-content: center;
+    line-height: 1;
+    overflow: hidden;
+    padding: 0 14px;
+    position: relative;
+    text-decoration: none;
+    transition: box-shadow 0.15s, transform 0.15s;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.register-button:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset,
+        rgba(45, 35, 66, .4) 0 2px 4px,
+        rgba(45, 35, 66, .3) 0 7px 13px -3px,
+        #3c4fe0 0 -3px 0 inset;
+}
+
+.register-button:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-title {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+/* IMAGES SECTION */
+.images {
+    height: 161px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.image1,
+.image2,
+.image3,
+.image4 {
+    max-height: 100px;
+    height: auto;
+    width: auto;
+    max-width: 20%;
+    object-fit: contain;
+}
+/* Responsive adjustments */
+
+/* For smaller desktops and laptops */
+@media (max-width: 1200px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav-list {
+        gap: 20px;
+    }
+
+    .nav-item {
+        margin-left: 10px;
+    }
+
+    .auth-buttons {
+        gap: 5px;
+    }
+
+    .login-button {
+        width: auto;
+        padding: 8px 12px;
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+    .register-button {
+        width: auto;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .images {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+        max-width: 30%;
+    }
+}
+
+/* For tablets */
+@media (max-width: 992px) {
+    .header {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        gap: 15px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .nav-item {
+        margin-left: 0;
+    }
+
+    .auth-buttons {
+        margin-top: 15px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .images {
+        gap: 10px;
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+        max-width: 45%;
+    }
+}
+
+/* For mobile devices */
+/* Responsive adjustments - Enhanced */
+
+/* Extra large desktops */
+@media (min-width: 1921px) {
+    .header {
+        padding: 20px 60px;
+        height: 120px;
+    }
+
+    .logo {
+        width: 75px;
+        height: 75px;
+        margin-right: 20px;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .nav-list {
+        gap: 40px;
+        height: 60px;
+    }
+
+    .nav-link {
+        padding: 10px 15px;
+        font-size: 17px;
+    }
+
+    .login-button {
+        width: 150px;
+        height: 55px;
+        padding: 12px 20px;
+        font-size: 17px;
+        margin-right: 15px;
+    }
+
+    .register-button {
+        width: 170px;
+        height: 55px;
+        padding: 12px 20px;
+        font-size: 17px;
+    }
+
+    .hero-title {
+        font-size: 56px;
+        margin-bottom: 25px;
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
+
+    .images {
+        gap: 40px;
+        padding: 15px 30px;
+        height: auto;
+        /* Adjust height for larger gaps */
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+        max-width: 22%;
+        max-height: 120px;
+    }
+}
+
+/* Large desktops and laptops */
+@media (max-width: 1600px) {
+    .header {
+        padding: 15px 30px;
+        height: 110px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+        margin-right: 18px;
+    }
+
+    .logo-text {
+        font-size: 19px;
+    }
+
+    .nav-list {
+        gap: 36px;
+        height: 55px;
+    }
+
+    .nav-link {
+        padding: 9px 13px;
+        font-size: 16px;
+    }
+
+    .login-button {
+        width: 140px;
+        height: 52px;
+        padding: 11px 18px;
+        font-size: 16px;
+        margin-right: 12px;
+    }
+
+    .register-button {
+        width: 160px;
+        height: 52px;
+        padding: 11px 18px;
+        font-size: 16px;
+    }
+
+    .hero-title {
+        font-size: 52px;
+        margin-bottom: 22px;
+    }
+
+    .hero-subtitle {
+        font-size: 21px;
+        margin-bottom: 32px;
+    }
+
+    .images {
+        gap: 35px;
+        padding: 12px 25px;
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+        max-width: 21%;
+        max-height: 110px;
+    }
+}
+
+/* Smaller desktops and laptops (as you already have) */
+@media (max-width: 1200px) {
+    .header {
+        padding: 15px 20px;
+        height: 105px;
+        /* Maintain original height */
+    }
+
+    .logo {
+        width: 63px;
+        /* Maintain original width */
+        height: 63px;
+        /* Maintain original height */
+        margin-right: 15px;
+        /* Maintain original margin */
+    }
+
+    .logo-text {
+        font-size: 18px;
+        /* Maintain original font size */
+    }
+
+    .nav-list {
+        gap: 20px;
+        height: 52px;
+        /* Maintain original height */
+    }
+
+    .nav-link {
+        padding: 8px 12px;
+        font-size: 15px;
+        /* Slightly smaller */
+    }
+
+    .login-button {
+        width: auto;
+        /* Adjust width to content */
+        padding: 8px 12px;
+        font-size: 14px;
+        margin-right: 5px;
+        height: auto;
+        /* Adjust height to content */
+    }
+
+    .register-button {
+        width: auto;
+        /* Adjust width to content */
+        padding: 8px 12px;
+        font-size: 14px;
+        height: auto;
+        /* Adjust height to content */
+    }
+
+    .hero-title {
+        font-size: 42px;
+        /* Slightly smaller */
+        margin-bottom: 18px;
+    }
+
+    .hero-subtitle {
+        font-size: 19px;
+        /* Slightly smaller */
+        margin-bottom: 28px;
+    }
+
+    .images {
+        gap: 15px;
+        padding: 10px;
+        height: auto;
+        /* Adjust height for smaller gaps */
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+        max-width: 30%;
+        /* Larger on smaller desktops */
+        max-height: 90px;
+        /* Slightly smaller */
+    }
+}
+
+/* Tablets (as you already have) */
+@media (max-width: 992px) {
+    .header {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        gap: 15px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .nav-item {
+        margin-left: 0;
+    }
+
+    .auth-buttons {
+        margin-top: 15px;
+        gap: 8px;
+        /* Add gap for better spacing when stacked */
+    }
+
+    .login-button {
+        margin-right: 5px;
+        /* Adjust margin when next to register button */
+        margin-bottom: 0;
+        /* Remove bottom margin when in row */
+    }
+
+    .hero {
+        padding: 40px 20px;
+        /* Adjust padding */
+    }
+
+    .hero-title {
+        font-size: 34px;
+        /* Further reduction */
+    }
+
+    .hero-subtitle {
+        font-size: 17px;
+        /* Further reduction */
+    }
+
+    .images {
+        gap: 10px;
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+        max-width: 45%;
+        /* Larger on tablets */
+        max-height: 80px;
+        /* Smaller on tablets */
+    }
+}
+
+/* Mobile devices (as you already have) */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-item {
+        margin-left: 0;
+    }
+
+    .nav-link {
+        padding: 8px 0;
+        font-size: 16px;
+        /* Slightly larger for better touch target */
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .login-button {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .register-button {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        /* Further reduction */
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+        /* Further reduction */
+    }
+
+    .images {
+        justify-content: space-around;
+        gap: 8px;
+        padding: 8px;
+        height: auto;
+        /* Adjust height for smaller gaps */
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+        max-width: 48%;
+        /* Slightly larger on mobile */
+        max-height: 70px;
+        /* Smaller on mobile */
+    }
+}
+
+/* Even smaller mobile devices (as you already have) */
+@media (max-width: 576px) {
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .company-name {
+        font-size: 1em;
+    }
+
+    .tagline {
+        font-size: 0.7em;
+    }
+
+    .hero-title {
+        font-size: 24px;
+        /* Final reduction for small mobiles */
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+        /* Final reduction for small mobiles */
+    }
+
+    .images {
+        justify-content: space-between;
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+        max-width: 100%;
+        /* Stack images on very small screens */
+        max-height: 50px;
+        /* Even smaller on tiny screens */
+    } }
